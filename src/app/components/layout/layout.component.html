@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container d-flex justify-content-between">
+    <a class="navbar-brand" routerLink="master">Manager app</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav mx-3">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="master" routerLinkActive="active"
+            >Master</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/employee" routerLinkActive="active"
+            >Employee</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/client" routerLinkActive="active"
+            >Client</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/client-project"
+            routerLinkActive="active"
+            >Client Project</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-primary" (click)="logOut()">Logout</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container pt-4">
+  <router-outlet />
+</div>
